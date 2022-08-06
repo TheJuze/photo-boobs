@@ -1,10 +1,10 @@
 import React from 'react';
-import { Input } from "components/Input";
+import { RegistrationForm } from "./compositions/RegistrationForm";
 
 const App = () => {
   return (
-    <div className="bg-blue-300 flex flex-col min-h-full">
-      <Input />
+    <div className="flex min-h-full justify-center items-center">
+      <RegistrationForm />
     </div>
   );
 }

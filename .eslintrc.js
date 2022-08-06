@@ -21,5 +21,41 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "key-spacing": [
+            "error",
+            { "beforeColon": false }
+        ],
+        "arrow-spacing": "error",
+        "space-infix-ops": "error",
+        "space-before-blocks": "error",
+        "no-multi-spaces": "warn",
+        "no-trailing-spaces": "warn",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "always"
+        ],
+        "comma-spacing": "warn",
+        "keyword-spacing": "error",
+        "react/jsx-tag-spacing": [
+            "error",
+            {
+                "closingSlash": "never",
+                "beforeSelfClosing": "always",
+                "afterOpening": "never",
+                "beforeClosing": "never"
+            }
+        ],
+        "react/jsx-curly-spacing": [
+            "error",
+            "never",
+            {
+                "allowMultiline": true
+            }
+        ],
+        "@typescript-eslint/type-annotation-spacing": "error",
     }
 }

@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { DetailedHTMLProps, FC, InputHTMLAttributes } from 'react'
+import cx from 'classnames'
 
-export const Input = () => {
+
+type Props = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & { register: any, error: any }
+
+export const Input: FC<Props> = (props) => {
+    const { className, register, error, ...otherProps } = props
+
     return (
-        <input />
+        <div className={cx(className, 'rounded-20')}>
+            <input {...otherProps} {...register} />
+        </div>
     )
 }

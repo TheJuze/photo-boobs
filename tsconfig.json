@@ -33,5 +33,6 @@
   "paths": {
     /* src */
     "components/*": [ "src/components/*" ],
+    "compositions/*": [ "src/compositions/*" ],
   }
 }
