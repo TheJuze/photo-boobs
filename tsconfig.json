@@ -34,5 +34,6 @@
     /* src */
     "components/*": [ "src/components/*" ],
     "compositions/*": [ "src/compositions/*" ],
+    "helpers": [ "src/helpers" ],
   }
 }
