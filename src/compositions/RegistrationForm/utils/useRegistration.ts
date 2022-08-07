@@ -4,22 +4,23 @@ import { constants, restApi } from "helpers";
 
 import { RegistrationInputs } from "../index";
 
-export const useRegistration = () => {
-    const navigate = useNavigate()
+const useRegistration = () => {
+  const navigate = useNavigate();
 
-    const registerUser: SubmitHandler<RegistrationInputs> = async({ username, password, email }) => {
-        try {
-            await restApi.post('auth/registration', {
-                username,
-                password,
-                email,
-            })
-            navigate(constants.routes.login)
-        }
-        catch (err) {
-            console.log(err)
-        }
+  const registerUser: SubmitHandler<RegistrationInputs> = async ({ username, password, email }) => {
+    try {
+      await restApi.post("auth/registration", {
+        username,
+        password,
+        email,
+      });
+      navigate(constants.routes.login);
+    } catch (err) {
+      console.log(err);
     }
+  };
 
-    return registerUser
-}
+  return registerUser;
+};
+
+export default useRegistration;

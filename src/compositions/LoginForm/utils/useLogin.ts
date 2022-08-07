@@ -9,19 +9,20 @@ type LoginResponse = {
     tokenType: string
 }
 
-export const useLogin = () => {
-    const loginUser: SubmitHandler<LoginInputs> = async({ username, password }) => {
-        try {
-            const { data: { accessToken } } = await restApi.post<LoginResponse>('auth/login', {
-                username,
-                password,
-            })
-            localStorage.setItem(constants.localStorage.authToken, accessToken)
-        }
-        catch (err) {
-            console.log(err)
-        }
+const useLogin = () => {
+  const loginUser: SubmitHandler<LoginInputs> = async ({ username, password }) => {
+    try {
+      const { data: { accessToken } } = await restApi.post<LoginResponse>("auth/login", {
+        username,
+        password,
+      });
+      localStorage.setItem(constants.localStorage.authToken, accessToken);
+    } catch (err) {
+      console.log(err);
     }
+  };
 
-    return loginUser
-}
+  return loginUser;
+};
+
+export default useLogin;

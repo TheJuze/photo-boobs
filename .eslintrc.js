@@ -1,61 +1,59 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+  ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: "./tsconfig.json"
+  },
+  plugins: [
+    "react",
+    "@typescript-eslint",
+  ],
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["src"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        moduleDirectory: ['node_modules', 'src/'],
+      },
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+  },
+  rules: {
+    semi: ["error", "always"],
+    quotes: ["error", "double"],
+    "react/function-component-definition": [
+      2,
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
     ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
+    'react/jsx-props-no-spreading': 'off',
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
     ],
-    "rules": {
-        "key-spacing": [
-            "error",
-            { "beforeColon": false }
+    "react/jsx-filename-extension": [
+      2,
+      {
+        extensions: [
+          ".js", ".jsx", ".ts", ".tsx",
         ],
-        "arrow-spacing": "error",
-        "space-infix-ops": "error",
-        "space-before-blocks": "error",
-        "no-multi-spaces": "warn",
-        "no-trailing-spaces": "warn",
-        "object-curly-spacing": [
-            "error",
-            "always"
-        ],
-        "array-bracket-spacing": [
-            "error",
-            "always"
-        ],
-        "comma-spacing": "warn",
-        "keyword-spacing": "error",
-        "react/jsx-tag-spacing": [
-            "error",
-            {
-                "closingSlash": "never",
-                "beforeSelfClosing": "always",
-                "afterOpening": "never",
-                "beforeClosing": "never"
-            }
-        ],
-        "react/jsx-curly-spacing": [
-            "error",
-            "never",
-            {
-                "allowMultiline": true
-            }
-        ],
-        "@typescript-eslint/type-annotation-spacing": "error",
-    }
-}
+      },
+    ],
+  },
+};
