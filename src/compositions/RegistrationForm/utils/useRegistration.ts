@@ -9,7 +9,7 @@ const useRegistration = () => {
 
   const registerUser: SubmitHandler<RegistrationInputs> = async ({ username, password, email }) => {
     try {
-      await restApi.post("auth/registration", {
+      await restApi.post(constants.endpoints.auth.registration, {
         username,
         password,
         email,

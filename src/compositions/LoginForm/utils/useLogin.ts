@@ -12,10 +12,13 @@ type LoginResponse = {
 const useLogin = () => {
   const loginUser: SubmitHandler<LoginInputs> = async ({ username, password }) => {
     try {
-      const { data: { accessToken } } = await restApi.post<LoginResponse>("auth/login", {
-        username,
-        password,
-      });
+      const { data: { accessToken } } = await restApi.post<LoginResponse>(
+        constants.endpoints.auth.login,
+        {
+          username,
+          password,
+        },
+      );
       localStorage.setItem(constants.localStorage.authToken, accessToken);
     } catch (err) {
       console.log(err);
