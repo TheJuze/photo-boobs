@@ -2,7 +2,7 @@ import { SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { constants, restApi } from "helpers";
 
-import { RegistrationInputs } from "../index";
+import { RegistrationInputs } from "../RegistrationForm";
 
 const useRegistration = () => {
   const navigate = useNavigate();

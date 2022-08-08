@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="finish login and register">
-      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/LoginForm/LoginForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compositions/LoginForm/utils/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/LoginForm/utils/useLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/RegistrationForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compositions/RegistrationForm/utils/useRegistration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/RegistrationForm/utils/useRegistration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
     "last_opened_file_path": "C:/Users/Dmitriy/Documents/photo-boobs/src/styles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "\\Users\\dmitriypavlov\\WebstormProjects\\photo-boobs\\node_modules\\eslint",
+    "node.js.selected.package.eslint": "/Users/dmitriypavlov/WebstormProjects/photo-boobs/node_modules/eslint",
     "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
@@ -82,6 +82,7 @@
       <workItem from="1659722825366" duration="309000" />
       <workItem from="1659723138374" duration="2165000" />
       <workItem from="1659780487874" duration="1520000" />
+      <workItem from="1659963534884" duration="86000" />
     </task>
     <task id="LOCAL-00001" summary="registration form">
       <created>1659826216600</created>
@@ -104,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659875683466</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish login and register">
+      <created>1659908008787</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659908008787</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

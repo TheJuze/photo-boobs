@@ -1,6 +1,6 @@
 import { SubmitHandler } from "react-hook-form";
 import { constants, restApi } from "helpers";
-import { LoginInputs } from "../index";
+import { LoginInputs } from "../LoginForm";
 
 type LoginResponse = {
     accessToken: string
