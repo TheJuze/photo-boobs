@@ -12,16 +12,26 @@ type Props = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButt
     & NewButtonProps
 
 const Button: FC<Props> = (props) => {
-  const { className, children, ...otherProps } = props;
+  const {
+    className, children, disabled, ...otherProps
+  } = props;
 
   const isLink = !!otherProps.href;
+
+  const buttonClassName = cx(
+    className,
+    "flex justify-center items-center",
+    "text-button text-white w-full py-16",
+    "bg-accent rounded-32 font-bold",
+    { "bg-gray text-light-gray cursor-not-allowed": disabled },
+  );
 
   if (isLink) {
     return (
       <a
         href={otherProps.href}
         target={otherProps.target}
-        className={cx(className, "text-button text-white text-center w-full py-16 bg-accent rounded-32")}
+        className={buttonClassName}
       >
         {children}
       </a>
@@ -31,7 +41,7 @@ const Button: FC<Props> = (props) => {
   return (
     <button
       type="button"
-      className={cx(className, "text-button text-white text-center w-full py-16 bg-accent rounded-32")}
+      className={buttonClassName}
       {...otherProps}
     >
       {children}

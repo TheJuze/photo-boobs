@@ -1,8 +1,11 @@
 import React, { useRef } from "react";
 import { Button } from "components";
 import Webcam from "react-webcam";
+import { useAuthedNavigation } from "hooks";
 
 const HomePage = () => {
+  useAuthedNavigation();
+
   const webcamRef = useRef<Webcam | null>(null);
 
   const [imgSrc, setImgSrc] = React.useState<string | null>(null);
@@ -18,7 +21,7 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col">
-      <Webcam audio={false} ref={webcamRef} videoConstraints={{ facingMode: "user" }} screenshotFormat="image/jpeg" />
+      <Webcam audio={false} ref={webcamRef} videoConstraints={{ width: 375, height: 375, facingMode: "user" }} screenshotFormat="image/jpeg" />
       <Button onClick={capture}>CAPTURE!</Button>
       {imgSrc && (<img src={imgSrc} alt="" />)}
       <Button> send</Button>

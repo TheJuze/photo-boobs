@@ -1,9 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
-import { constants } from "helpers";
-
 import { Input, Button } from "components";
+import {
+  ArrowRightIcon, LockIcon, MessageIcon, ProfileIcon,
+} from "assets/images/icons";
 
 import useRegistration from "./utils/useRegistration";
 
@@ -14,18 +14,23 @@ export type RegistrationInputs = {
 }
 
 const RegistrationForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<RegistrationInputs>();
+  const {
+    register, handleSubmit, formState: { errors, isValid },
+  } = useForm<RegistrationInputs>({
+    mode: "onBlur",
+  });
   const registerUser = useRegistration();
 
   return (
     <>
-      <form className="bg-red-400 p-8 rounded-lg flex flex-col" onSubmit={handleSubmit(registerUser)}>
-        <h1 className="text-center">Register</h1>
+      <form className="flex flex-col h-full py-44" onSubmit={handleSubmit(registerUser)}>
+        <h1 className="text-center text-h1 mb-[108rem] text-white">Присоединяйся</h1>
         <Input
           type="text"
           placeholder="Username"
           register={register("username", { required: true })}
           error={errors.username}
+          iconLeft={<ProfileIcon className="text-white w-18 h-18" />}
         />
         <Input
           type="password"
@@ -39,6 +44,7 @@ const RegistrationForm = () => {
             },
           })}
           error={errors.password}
+          iconLeft={<LockIcon className="text-white w-18 h-18" />}
         />
         <Input
           type="email"
@@ -48,13 +54,13 @@ const RegistrationForm = () => {
             required: true,
           })}
           error={errors.email}
+          iconLeft={<MessageIcon className="text-white w-18 h-18" />}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" disabled={!isValid} className="mt-auto">
+          Продолжить
+          <ArrowRightIcon className="ml-8" />
+        </Button>
       </form>
-      <p>
-        Already have an account?
-        <Link to={constants.routes.login}>Login</Link>
-      </p>
     </>
   );
 };

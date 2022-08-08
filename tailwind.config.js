@@ -1,5 +1,5 @@
 // Custom spacing
-const spacingMap = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 36, 40, 48, 52, 56, 60, 64, 72, 80, 96, 112 ]
+const spacingMap = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96, 112 ]
 
 const spacing = spacingMap.reduce((acc, item) => {
   acc[item.toString()] = `${item}rem`

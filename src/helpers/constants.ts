@@ -4,6 +4,7 @@ const routes = {
   profile: "/profile",
   registration: "/registration",
   login: "/login",
+  friends: "friends",
 };
 
 const endpoints = {
