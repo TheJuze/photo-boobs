@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  html {
+    @media (max-width: 568px) {
+      font-size: 0.267vw; // 1px for mobiles with 375px screen width
+    }
+    @media (min-width: 569px) {
+      font-size: 1px;
+    }
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+// this dont work in @layer base
+body {
+
+  &.body-scroll-frozen {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .width-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @screen sm {
+      padding-right: 16rem;
+      padding-left: 16rem;
+    }
+    @screen md {
+      padding-right: 16rem;
+      padding-left: 16rem;
+    }
+    @screen lg {
+      box-sizing: content-box;
+      max-width: 1152px;
+    }
+  }
+
+  .bone {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    @apply bg-gray-light;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(#fff, 0.07), transparent);
+      transform: translateX(-100%);
+      animation: translateX100 2s infinite;
+      content: '';
+    }
+  }
+
+  .text-h1 {
+    font-weight: 700;
+  }
+
+  .text-h2,
+  .text-h3,
+  .text-h4 {
+    font-weight: 500;
+  }
+
+  .text-h1 {
+    font-size: 24rem;
+    line-height: 29rem;
+  }
+
+  .text-h2 {
+    @screen sm {
+      font-size: 28rem;
+      line-height: 34rem;
+    }
+    @screen lg {
+      font-size: 40rem;
+      line-height: 44rem;
+    }
+  }
+
+  .text-h3 {
+    @screen sm {
+      font-size: 20rem;
+      line-height: 24rem;
+    }
+    @screen lg {
+      font-size: 28rem;
+      line-height: 34rem;
+    }
+  }
+
+  .text-h4 {
+    @screen sm {
+      font-size: 18rem;
+      line-height: 22rem;
+    }
+    @screen lg {
+      font-size: 24rem;
+      line-height: 29rem;
+    }
+  }
+
+  .text-body {
+    @screen sm {
+      font-size: 18rem;
+      line-height: 25rem;
+    }
+    @screen lg {
+      font-size: 20rem;
+      line-height: 28rem;
+    }
+  }
+
+  .text-body {
+    @screen sm {
+      font-size: 18rem;
+      line-height: 26rem;
+    }
+    @screen lg {
+      font-size: 20rem;
+      line-height: 28rem;
+    }
+  }
+
+  .text-paragraph {
+    @screen sm {
+      font-size: 16rem;
+      line-height: 26rem;
+    }
+    @screen lg {
+      font-size: 18rem;
+      line-height: 28rem;
+    }
+  }
+
+  .text-caption {
+    font-weight: 500;
+  }
+
+  .text-gradient-1 {
+    @apply bg-gradient-1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+
+#__next {
+  @media (min-width: 569px) and (max-width: 1280px) {
+    max-width: 375rem;
+    margin: 0 auto;
+  }
+}
+
+// to allow autocomplete work properly
+.text-h1 {}
+.text-h2 {}
+.text-h3 {}
+.text-h4 {}
+.text-body {}
+.text-paragraph {}
+.text-caption {}
+.text-gradient-1 {}
+.width-container {}
