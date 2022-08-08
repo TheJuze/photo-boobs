@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="finish login and register">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="add eslint rule">
+      <change afterPath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/EditProfileForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/utils/useEditProfile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/compositions/forms/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/profile/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ProfilePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/RegistrationPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/LoginForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/LoginForm/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/LoginForm/utils/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/LoginForm/utils/useLogin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/RegistrationForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/RegistrationForm/utils/useRegistration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/RegistrationForm/utils/useRegistration.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/LoginForm/utils/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/utils/useLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/RegistrationForm/RegistrationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/RegistrationForm/utils/useRegistration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/utils/useRegistration.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compositions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,29 +37,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Users/Dmitriy/Documents/photo-boobs/src/styles",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "/Users/dmitriypavlov/WebstormProjects/photo-boobs/node_modules/eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/dmitriypavlov/WebstormProjects/photo-boobs/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dmitriy/Documents/photo-boobs/src/styles&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/dmitriypavlov/WebstormProjects/photo-boobs/node_modules/eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/dmitriypavlov/WebstormProjects/photo-boobs/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dmitriy\Documents\photo-boobs\src\styles" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/compositions/forms" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -82,7 +92,8 @@
       <workItem from="1659722825366" duration="309000" />
       <workItem from="1659723138374" duration="2165000" />
       <workItem from="1659780487874" duration="1520000" />
-      <workItem from="1659963534884" duration="86000" />
+      <workItem from="1659963534884" duration="4338000" />
+      <workItem from="1659968040556" duration="2485000" />
     </task>
     <task id="LOCAL-00001" summary="registration form">
       <created>1659826216600</created>
@@ -112,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659908008787</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add eslint rule">
+      <created>1659963639906</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659963639906</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +150,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="registration form" />
     <MESSAGE value="finish login and register" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish login and register" />
+    <MESSAGE value="add eslint rule" />
+    <option name="LAST_COMMIT_MESSAGE" value="add eslint rule" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
