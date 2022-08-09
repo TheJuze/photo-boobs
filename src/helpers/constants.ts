@@ -25,6 +25,9 @@ const endpoints = {
     getProfileById: (userId: string) => `search/${userId}`,
 
   },
+  image: {
+    sendPhoto: "image/photo",
+  },
 };
 
 const localStorage = {
