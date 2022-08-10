@@ -38,16 +38,42 @@ const useFriends = () => {
     }
   };
 
-  useEffect(() => {
+  const getAllFriends = () => {
     getFriends();
     getIncomingFriends();
     getOutgoingFriends();
+  };
+
+  const addFriend = async (userId: string) => {
+    try {
+      await restApi.post(constants.endpoints.friends.addFriend, { userId });
+      // TODO: refactor this
+      getAllFriends();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const deleteFriend = async (userId: string) => {
+    try {
+      await restApi.post(constants.endpoints.friends.removeFriend, { userId });
+      // TODO: refactor this
+      getAllFriends();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getAllFriends();
   }, []);
 
   return {
     friends,
     incomingFriends,
     outgoingFriends,
+    addFriend,
+    deleteFriend,
   };
 };
 

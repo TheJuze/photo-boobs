@@ -1,5 +1,6 @@
 import React from "react";
 import { UserInfo } from "types";
+import { getImageUrl } from "helpers";
 
 const mockUsers:UserInfo[] = [
   {
@@ -18,7 +19,7 @@ const Users = () => {
       {mockUsers.map((user) => (
         <li>
           {user.imagePath ? (
-            <img src={`${process.env.REACT_APP_BASE_BACKEND_URL}${user.imagePath}`} alt="" />
+            <img src={getImageUrl(user.imagePath)} alt="" />
           ) : (
             <span>{user.name ? getFirstLetters(user.name) : getFirstLetters(user.username)}</span>
           )}

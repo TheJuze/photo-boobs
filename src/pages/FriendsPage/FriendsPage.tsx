@@ -12,7 +12,9 @@ type InputProps = {
 };
 
 const FriendsPage = () => {
-  const { friends, incomingFriends, outgoingFriends } = useFriends();
+  const {
+    friends, incomingFriends, outgoingFriends, addFriend, deleteFriend,
+  } = useFriends();
   const [foundUser, setFoundUser] = useState<UserInfo>();
 
   const {
@@ -35,22 +37,6 @@ const FriendsPage = () => {
     }
   }, [debouncedSearchValue]);
 
-  const handleAddFriend = (userId:string) => {
-    try {
-      restApi.post(constants.endpoints.friends.addFriend, { userId });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const handleDeleteFriend = (userId:string) => {
-    try {
-      restApi.post(constants.endpoints.friends.removeFriend, { userId });
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
   useEffect(() => {
     if (isValid && !isValidating && searchValue) {
       handleChange();
@@ -67,7 +53,7 @@ const FriendsPage = () => {
       />
       {Boolean(debouncedSearchValue) && foundUser && (
         <div className="mt-8">
-          <Friend {...foundUser} onAdd={handleAddFriend} />
+          <Friend {...foundUser} onAdd={addFriend} />
         </div>
       )}
       {Boolean(incomingFriends.length) && (
@@ -75,7 +61,7 @@ const FriendsPage = () => {
         <h2 className="text-h2 text-black">Входящие заявки</h2>
         {incomingFriends.map((friend) => (
           <li key={friend.id}>
-            <Friend {...friend} onAdd={handleAddFriend} onDelete={handleDeleteFriend} />
+            <Friend {...friend} onAdd={addFriend} onDelete={deleteFriend} />
           </li>
         ))}
       </ul>
@@ -85,7 +71,7 @@ const FriendsPage = () => {
         <h2 className="text-h2 text-black">Исходящие заявки</h2>
         {outgoingFriends.map((friend) => (
           <li key={friend.id}>
-            <Friend {...friend} onAdd={handleAddFriend} onDelete={handleDeleteFriend} />
+            <Friend {...friend} onAdd={addFriend} onDelete={deleteFriend} />
           </li>
         ))}
       </ul>
@@ -95,7 +81,7 @@ const FriendsPage = () => {
         <h2 className="text-h2 text-black">Друзья</h2>
         {friends.map((friend) => (
           <li key={friend.id}>
-            <Friend {...friend} onDelete={handleDeleteFriend} />
+            <Friend {...friend} onDelete={deleteFriend} />
           </li>
         ))}
       </ul>
