@@ -4,7 +4,7 @@ const routes = {
   profile: "/profile",
   registration: "/registration",
   login: "/login",
-  friends: "friends",
+  friends: "/friends",
 };
 
 const endpoints = {
@@ -21,12 +21,18 @@ const endpoints = {
   },
   profile: {
     profile: "profile",
-    searchProfile: (username: string) => `search/${username}`,
-    getProfileById: (userId: string) => `search/${userId}`,
-
+    searchProfile: (username: string) => `profile/search/${username}`,
+    getProfileById: (userId: string) => `profile/search/${userId}`,
   },
   image: {
     sendPhoto: "image/photo",
+  },
+  friends: {
+    getFriends: "friends",
+    getIncomingFriends: "friends/request/incoming",
+    getOutgoingFriends: "friends/request/outgoing",
+    addFriend: "friends/manage/add",
+    removeFriend: "friends/manage/delete",
   },
 };
 

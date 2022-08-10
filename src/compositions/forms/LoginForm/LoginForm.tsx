@@ -3,9 +3,9 @@ import { useForm } from "react-hook-form";
 
 import { Button, Input } from "components";
 import { useNavigate } from "react-router";
+import { constants } from "helpers";
+import { LockIcon, ProfileIcon } from "assets/images/icons";
 import useLogin from "./utils/useLogin";
-import { constants } from "../../../helpers";
-import { LockIcon, ProfileIcon } from "../../../assets/images/icons";
 
 export type LoginInputs = {
     username: string;

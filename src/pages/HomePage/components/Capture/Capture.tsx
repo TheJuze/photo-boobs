@@ -8,13 +8,14 @@ import CaptureButton from "../CaptureButton/CaptureButton";
 type Props = {
   onCapture: () => void
   webcamRef: React.MutableRefObject<Webcam | null>
+  className?: string
 };
 
-const Capture:React.FC<Props> = ({ onCapture, webcamRef }) => {
+const Capture:React.FC<Props> = (({ onCapture, webcamRef, className }) => {
   const navigate = useNavigate();
 
   return (
-    <>
+    <div className={className}>
       <div className="flex justify-between w-full">
         <UserIcon onClick={() => navigate(constants.routes.friends)} />
         <ProfileIcon onClick={() => navigate(constants.routes.profile)} />
@@ -39,8 +40,8 @@ const Capture:React.FC<Props> = ({ onCapture, webcamRef }) => {
         <ShowIcon />
         <p className="text-label">History</p>
       </div>
-    </>
+    </div>
   );
-};
+});
 
-export default Capture;
+export default React.memo(Capture);

@@ -35,11 +35,10 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col items-center pt-52 pb-44 px-16 h-full">
-      {imgSrc ? (
+      {imgSrc && (
         <Send imgSrc={imgSrc} onSend={sendImage} onClear={clearImage} onSave={saveImage} />
-      ) : (
-        <Capture onCapture={capture} webcamRef={webcamRef} />
       )}
+      <Capture onCapture={capture} webcamRef={webcamRef} className={imgSrc ? "hidden" : ""} />
     </div>
   );
 };

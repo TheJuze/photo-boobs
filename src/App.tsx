@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProfileProvider } from "context";
 import { constants } from "helpers";
 import {
-  HomePage, ProfilePage, LoginPage, RegistrationPage, AuthPage,
+  HomePage, ProfilePage, LoginPage, RegistrationPage, AuthPage, FriendsPage,
 } from "pages";
 
 const App = () => (
@@ -16,6 +16,7 @@ const App = () => (
           <Route path={constants.routes.auth} element={<AuthPage />} />
           <Route path={constants.routes.registration} element={<RegistrationPage />} />
           <Route path={constants.routes.login} element={<LoginPage />} />
+          <Route path={constants.routes.friends} element={<FriendsPage />} />
         </Routes>
       </BrowserRouter>
     </ProfileProvider>
