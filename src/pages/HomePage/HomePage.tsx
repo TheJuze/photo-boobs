@@ -19,7 +19,9 @@ const HomePage = () => {
       {imgSrc && (
         <Send imgSrc={imgSrc} onSend={sendImage} onClear={clearImage} onSave={saveImage} />
       )}
-      {webcamRef ? (<Capture onCapture={capture} webcamRef={webcamRef} className={imgSrc ? "hidden" : ""} />) : (
+      {webcamRef ? (
+        <Capture onCapture={capture} webcamRef={webcamRef} className={imgSrc ? "hidden" : ""} />
+      ) : (
         <div className="text-label text-black">loading...</div>
       )}
 

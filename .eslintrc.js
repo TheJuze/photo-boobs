@@ -42,6 +42,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
+    "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/control-has-associated-label": "off",
     "import/extensions": [
       "error",

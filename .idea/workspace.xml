@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="friends">
+    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="users">
+      <change afterPath="$PROJECT_DIR$/src/components/Input/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/components/User.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/utils/useMyFriends.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Input/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/FriendsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/FriendsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/utils/useFriends.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/utils/useFriends.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/Users.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +57,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/scss" />
       <recent name="$PROJECT_DIR$/src/compositions/forms" />
@@ -85,7 +93,7 @@
       <workItem from="1659723138374" duration="2165000" />
       <workItem from="1659780487874" duration="1520000" />
       <workItem from="1659963534884" duration="4338000" />
-      <workItem from="1659968040556" duration="37015000" />
+      <workItem from="1659968040556" duration="39026000" />
     </task>
     <task id="LOCAL-00001" summary="registration form">
       <created>1659826216600</created>
@@ -185,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660158598841</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="friends refactor">
+      <created>1660159542524</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1660159542524</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,7 +231,9 @@
     <MESSAGE value="LoginPage.tsx" />
     <MESSAGE value="search and rerender bug" />
     <MESSAGE value="friends" />
-    <option name="LAST_COMMIT_MESSAGE" value="friends" />
+    <MESSAGE value="friends refactor" />
+    <MESSAGE value="users" />
+    <option name="LAST_COMMIT_MESSAGE" value="users" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

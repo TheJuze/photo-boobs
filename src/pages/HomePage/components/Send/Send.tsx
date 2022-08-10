@@ -1,7 +1,7 @@
 import React from "react";
 import { CloseSquareIcon, DownloadIcon, SendIcon } from "assets/images/icons";
 import CaptureButton from "../CaptureButton/CaptureButton";
-import Users from "./components/Users";
+import Users from "./components/Users/Users";
 
 type Props = {
     imgSrc: string

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { constants, restApi } from "helpers";
 import { UserInfo } from "types";
 import useDebounce from "hooks/useDebounce";
+import { useAuthedNavigation } from "hooks";
 import useFriends from "./utils/useFriends";
 import Friend from "./components/Friend/Friend";
 
@@ -12,9 +13,12 @@ type InputProps = {
 };
 
 const FriendsPage = () => {
+  useAuthedNavigation();
+
   const {
     friends, incomingFriends, outgoingFriends, addFriend, deleteFriend,
   } = useFriends();
+
   const [foundUser, setFoundUser] = useState<UserInfo>();
 
   const {
