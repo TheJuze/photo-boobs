@@ -104,14 +104,8 @@ body {
   }
 
   .text-h3 {
-    @screen sm {
-      font-size: 20rem;
-      line-height: 24rem;
-    }
-    @screen lg {
-      font-size: 28rem;
-      line-height: 34rem;
-    }
+    font-size: 20rem;
+    line-height: 24rem;
   }
 
   .text-h4 {

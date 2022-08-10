@@ -7,7 +7,7 @@ import {
 } from "pages";
 
 const App = () => (
-  <div className="bg-accent h-full">
+  <div className="bg-black h-full">
     <ProfileProvider>
       <BrowserRouter>
         <Routes>

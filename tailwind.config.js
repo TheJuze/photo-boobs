@@ -8,7 +8,7 @@ const spacing = spacingMap.reduce((acc, item) => {
 }, {})
 
 // Custom width/height
-const sizeMap = [ 8, 12, 14, 16, 20, 28, 32, 40, 44, 48, 64 ]
+const sizeMap = [ 8, 12, 14, 16, 20, 28, 32, 40, 44, 48, 62, 64 ]
 
 const sizes = sizeMap.reduce((acc, size) => {
   acc.height[size.toString()] = `${size}rem`
@@ -44,11 +44,12 @@ module.exports = {
         'button': ['16rem', '24rem'],
         'button-semibold': ['16rem', '20rem'],
         'caption': ['12rem', '18rem'],
-        'label': ['14rem', '15rem'],
+        'label': ['16rem', '19rem'],
         'description': ['14rem', '20rem'],
       },
       borderRadius: {
         32: '32rem',
+        50: '50rem',
       }
     },
   },

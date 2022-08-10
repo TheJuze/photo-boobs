@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
-import { Button } from "components";
 import Webcam from "react-webcam";
 import { useAuthedNavigation } from "hooks";
 import { constants, restApi } from "helpers";
+import Capture from "./components/Capture/Capture";
+import Send from "./components/Send/Send";
 
 const HomePage = () => {
   useAuthedNavigation();
@@ -16,20 +17,29 @@ const HomePage = () => {
     setImgSrc(imageSrc);
   };
 
-  const sendImage = () => {
+  const sendImage = (userIds: string[]) => {
     const base64 = imgSrc?.replace("data:image/jpeg;base64,", "");
     restApi.post(constants.endpoints.image.sendPhoto, {
       file: base64,
-      userIds: ["a7ffb758-e0f5-4980-9f3b-cfc21837394a"],
+      userIds,
     });
   };
 
+  const clearImage = () => {
+    setImgSrc(null);
+  };
+
+  const saveImage = () => {
+    window.location.href = imgSrc?.replace("image/jpeg", "image/octet-stream") || "";
+  };
+
   return (
-    <div className="flex flex-col">
-      <Webcam audio={false} ref={webcamRef} screenshotQuality={0.5} videoConstraints={{ width: 375, height: 375, facingMode: "user" }} screenshotFormat="image/jpeg" />
-      <Button onClick={capture}>CAPTURE!</Button>
-      {imgSrc && (<img src={imgSrc} alt="" />)}
-      <Button onClick={sendImage}>send</Button>
+    <div className="flex flex-col items-center pt-52 pb-44 px-16 h-full">
+      {imgSrc ? (
+        <Send imgSrc={imgSrc} onSend={sendImage} onClear={clearImage} onSave={saveImage} />
+      ) : (
+        <Capture onCapture={capture} webcamRef={webcamRef} />
+      )}
     </div>
   );
 };

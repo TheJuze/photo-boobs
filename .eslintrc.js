@@ -40,6 +40,7 @@ module.exports = {
     "react/require-default-props": "off",
     "react/jsx-no-useless-fragment": "off",
     'react/jsx-props-no-spreading': 'off',
+    'no-unused-vars': 'warn',
     "import/extensions": [
       "error",
       "ignorePackages",
