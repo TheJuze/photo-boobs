@@ -29,8 +29,8 @@ const endpoints = {
   },
   friends: {
     getFriends: "friends",
-    getIncomingFriends: "friends/request/incoming",
-    getOutgoingFriends: "friends/request/outgoing",
+    getIncomingFriends: "friends/requests/incoming",
+    getOutgoingFriends: "friends/requests/outgoing",
     addFriend: "friends/manage/add",
     removeFriend: "friends/manage/delete",
   },

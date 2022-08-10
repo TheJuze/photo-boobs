@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="LoginPage.tsx">
-      <change afterPath="$PROJECT_DIR$/src/hooks/useDebounce.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/FriendsPage/FriendsPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/FriendsPage/components/Friend/Friend.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/FriendsPage/utils/useFriends.ts" afterDir="false" />
+    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="friends">
+      <change afterPath="$PROJECT_DIR$/src/helpers/getters.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/HomePage/utils/useCamera.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/EditProfileForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/EditProfileForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/FriendsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/FriendsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/components/Friend/Friend.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/components/Friend/Friend.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/utils/useFriends.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/utils/useFriends.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Capture/Capture.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Capture/Capture.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <workItem from="1659723138374" duration="2165000" />
       <workItem from="1659780487874" duration="1520000" />
       <workItem from="1659963534884" duration="4338000" />
-      <workItem from="1659968040556" duration="31982000" />
+      <workItem from="1659968040556" duration="36227000" />
     </task>
     <task id="LOCAL-00001" summary="registration form">
       <created>1659826216600</created>
@@ -178,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660123044882</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="search and rerender bug">
+      <created>1660154359398</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1660154359398</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,7 +216,9 @@
     <MESSAGE value="home page" />
     <MESSAGE value="RegistrationPage" />
     <MESSAGE value="LoginPage.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="LoginPage.tsx" />
+    <MESSAGE value="search and rerender bug" />
+    <MESSAGE value="friends" />
+    <option name="LAST_COMMIT_MESSAGE" value="friends" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

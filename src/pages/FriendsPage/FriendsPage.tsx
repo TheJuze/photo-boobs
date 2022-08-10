@@ -3,9 +3,9 @@ import { Input } from "components";
 import { useForm } from "react-hook-form";
 import { constants, restApi } from "helpers";
 import { UserInfo } from "types";
+import useDebounce from "hooks/useDebounce";
 import useFriends from "./utils/useFriends";
 import Friend from "./components/Friend/Friend";
-import useDebounce from "../../hooks/useDebounce";
 
 type InputProps = {
   search: string
@@ -35,8 +35,24 @@ const FriendsPage = () => {
     }
   }, [debouncedSearchValue]);
 
+  const handleAddFriend = (userId:string) => {
+    try {
+      restApi.post(constants.endpoints.friends.addFriend, { userId });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleDeleteFriend = (userId:string) => {
+    try {
+      restApi.post(constants.endpoints.friends.removeFriend, { userId });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
-    if (isValid && !isValidating) {
+    if (isValid && !isValidating && searchValue) {
       handleChange();
     }
   }, [handleChange]);
@@ -50,7 +66,39 @@ const FriendsPage = () => {
         placeholder="Add new friend"
       />
       {Boolean(debouncedSearchValue) && foundUser && (
-        <Friend {...foundUser} />
+        <div className="mt-8">
+          <Friend {...foundUser} onAdd={handleAddFriend} />
+        </div>
+      )}
+      {Boolean(incomingFriends.length) && (
+      <ul>
+        <h2 className="text-h2 text-black">Входящие заявки</h2>
+        {incomingFriends.map((friend) => (
+          <li key={friend.id}>
+            <Friend {...friend} onAdd={handleAddFriend} onDelete={handleDeleteFriend} />
+          </li>
+        ))}
+      </ul>
+      )}
+      {Boolean(outgoingFriends.length) && (
+      <ul>
+        <h2 className="text-h2 text-black">Исходящие заявки</h2>
+        {outgoingFriends.map((friend) => (
+          <li key={friend.id}>
+            <Friend {...friend} onAdd={handleAddFriend} onDelete={handleDeleteFriend} />
+          </li>
+        ))}
+      </ul>
+      )}
+      {Boolean(friends.length) && (
+      <ul>
+        <h2 className="text-h2 text-black">Друзья</h2>
+        {friends.map((friend) => (
+          <li key={friend.id}>
+            <Friend {...friend} onDelete={handleDeleteFriend} />
+          </li>
+        ))}
+      </ul>
       )}
     </div>
   );

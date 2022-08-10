@@ -1,21 +1,41 @@
 import { useEffect, useState } from "react";
 import { constants, restApi } from "helpers";
+import { UserInfo } from "types";
 
 const useFriends = () => {
-  const [friends, setFriends] = useState([]);
-  const [incomingFriends, setIncomingFriends] = useState([]);
-  const [outgoingFriends, setOutgoingFriends] = useState([]);
+  const [friends, setFriends] = useState<UserInfo[]>([]);
+  const [incomingFriends, setIncomingFriends] = useState<UserInfo[]>([]);
+  const [outgoingFriends, setOutgoingFriends] = useState<UserInfo[]>([]);
 
   const getFriends = async () => {
-    setFriends(await restApi.get(constants.endpoints.friends.getFriends));
+    try {
+      const { data } = await restApi.get<UserInfo[]>(constants.endpoints.friends.getFriends);
+      setFriends(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const getIncomingFriends = async () => {
-    setIncomingFriends(await restApi.get(constants.endpoints.friends.getIncomingFriends));
+    try {
+      const { data } = await restApi.get<UserInfo[]>(
+        constants.endpoints.friends.getIncomingFriends,
+      );
+      setIncomingFriends(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const getOutgoingFriends = async () => {
-    setOutgoingFriends(await restApi.get(constants.endpoints.friends.getOutgoingFriends));
+    try {
+      const { data } = await restApi.get<UserInfo[]>(
+        constants.endpoints.friends.getOutgoingFriends,
+      );
+      setOutgoingFriends(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {

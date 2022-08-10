@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
-
 import { useProfile } from "context";
 import { Button, Input } from "components";
 import { UserInfo } from "types";
-
+import { getImageUrl } from "helpers";
 import useEditProfile from "./utils/useEditProfile";
 
 const EditProfileForm = () => {
@@ -35,7 +34,7 @@ const EditProfileForm = () => {
 
   return (
     <form className="bg-green-300 p-8 rounded-lg flex flex-col" onSubmit={handleSubmit(editUserProfile)}>
-      <img src={values?.imagePath ? `${process.env.REACT_APP_BASE_BACKEND_URL}${values?.imagePath}` : ""} alt="profile" />
+      <img src={getImageUrl(values.imagePath)} alt="profile" />
       <Input
         type="text"
         placeholder="UserName"

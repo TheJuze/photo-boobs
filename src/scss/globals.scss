@@ -81,42 +81,29 @@ body {
     font-weight: 700;
   }
 
-  .text-h2,
-  .text-h3,
-  .text-h4 {
-    font-weight: 500;
-  }
-
   .text-h1 {
-    font-size: 24rem;
-    line-height: 29rem;
+    font-size: 26rem;
+    line-height: 1.5;
   }
 
   .text-h2 {
-    @screen sm {
-      font-size: 28rem;
-      line-height: 34rem;
-    }
-    @screen lg {
-      font-size: 40rem;
-      line-height: 44rem;
-    }
+    font-size: 24rem;
+    line-height: 1.5;
   }
 
   .text-h3 {
-    font-size: 20rem;
-    line-height: 24rem;
+    font-size: 22rem;
+    line-height: 1.5;
   }
 
   .text-h4 {
-    @screen sm {
-      font-size: 18rem;
-      line-height: 22rem;
-    }
-    @screen lg {
-      font-size: 24rem;
-      line-height: 29rem;
-    }
+    font-size: 20rem;
+    line-height: 1.5;
+  }
+
+  .text-subtitle {
+    font-size: 18rem;
+    line-height: 1.5
   }
 
   .text-body {
