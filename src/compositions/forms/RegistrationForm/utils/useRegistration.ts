@@ -2,6 +2,7 @@ import { SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { constants, restApi } from "helpers";
 import { AuthResponse } from "types";
+import { sha256 } from "js-sha256";
 import { RegistrationInputs } from "../RegistrationForm";
 
 const useRegistration = () => {
@@ -12,7 +13,7 @@ const useRegistration = () => {
       // eslint-disable-next-line max-len
       const { data: { accessToken } } = await restApi.post<AuthResponse>(constants.endpoints.auth.registration, {
         username,
-        password,
+        password: sha256(password),
         email,
       });
 
