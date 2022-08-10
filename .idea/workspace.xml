@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="home page">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="RegistrationPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/forms/LoginForm/utils/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/utils/useLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/RegistrationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/utils/useRegistration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/utils/useRegistration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage/RegistrationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/RegistrationPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +84,7 @@
       <workItem from="1659723138374" duration="2165000" />
       <workItem from="1659780487874" duration="1520000" />
       <workItem from="1659963534884" duration="4338000" />
-      <workItem from="1659968040556" duration="25446000" />
+      <workItem from="1659968040556" duration="25878000" />
     </task>
     <task id="LOCAL-00001" summary="registration form">
       <created>1659826216600</created>
@@ -159,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660120969260</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="RegistrationPage">
+      <created>1660122670930</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1660122670930</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +190,8 @@
     <MESSAGE value="register layout" />
     <MESSAGE value="change phoro quality" />
     <MESSAGE value="home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="home page" />
+    <MESSAGE value="RegistrationPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="RegistrationPage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

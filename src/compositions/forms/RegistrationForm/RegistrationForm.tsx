@@ -4,10 +4,9 @@ import { Input, Button } from "components";
 import {
   ArrowRightIcon, LockIcon, MessageIcon, ProfileIcon,
 } from "assets/images/icons";
-
 import { useNavigate } from "react-router";
+import { constants } from "helpers";
 import useRegistration from "./utils/useRegistration";
-import { constants } from "../../../helpers";
 
 export type RegistrationInputs = {
     username: string;
