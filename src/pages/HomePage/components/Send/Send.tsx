@@ -31,7 +31,7 @@ const Send: React.FC<Props> = ({
         </CaptureButton>
         <DownloadIcon onClick={onSave} />
       </div>
-      <Users />
+      <Users className="mt-auto w-full" />
     </>
   );
 };

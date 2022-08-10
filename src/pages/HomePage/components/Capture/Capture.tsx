@@ -3,6 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { ProfileIcon, ShowIcon, UserIcon } from "assets/images/icons";
 import { constants } from "helpers";
+import cx from "classnames";
 import CaptureButton from "../CaptureButton/CaptureButton";
 
 type Props = {
@@ -15,20 +16,21 @@ const Capture:React.FC<Props> = (({ onCapture, webcamRef, className }) => {
   const navigate = useNavigate();
 
   return (
-    <div className={className}>
+    <div className={cx(className, "w-full")}>
       <div className="flex justify-between w-full">
         <UserIcon onClick={() => navigate(constants.routes.friends)} />
         <ProfileIcon onClick={() => navigate(constants.routes.profile)} />
       </div>
-      <div className="flex flex-col items-center">
-        <Webcam
-          audio={false}
-          ref={webcamRef}
-          screenshotQuality={0.5}
-          videoConstraints={{ width: 375, height: 375, facingMode: "user" }}
-          screenshotFormat="image/jpeg"
-          className="mt-72 rounded-50"
-        />
+      <div className="flex flex-col items-center w-full">
+        <div className="w-full h-auto aspect-square mt-72 rounded-50 bg-gray overflow-hidden">
+          <Webcam
+            audio={false}
+            ref={webcamRef}
+            screenshotQuality={0.5}
+            videoConstraints={{ width: 720, height: 720, facingMode: "user" }}
+            screenshotFormat="image/jpeg"
+          />
+        </div>
         <CaptureButton
           onClick={onCapture}
           className="mt-32"
