@@ -1,7 +1,7 @@
 import { SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { constants, restApi } from "helpers";
-
+import { AuthResponse } from "types";
 import { RegistrationInputs } from "../RegistrationForm";
 
 const useRegistration = () => {
@@ -9,12 +9,16 @@ const useRegistration = () => {
 
   const registerUser: SubmitHandler<RegistrationInputs> = async ({ username, password, email }) => {
     try {
-      await restApi.post(constants.endpoints.auth.registration, {
+      // eslint-disable-next-line max-len
+      const { data: { accessToken } } = await restApi.post<AuthResponse>(constants.endpoints.auth.registration, {
         username,
         password,
         email,
       });
-      navigate(constants.routes.login);
+
+      localStorage.setItem(constants.localStorage.authToken, accessToken);
+
+      navigate(constants.routes.home);
     } catch (err) {
       console.log(err);
     }

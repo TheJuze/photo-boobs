@@ -5,3 +5,10 @@ export type UserInfo = {
     status: string
     imagePath: string
 }
+
+export type AuthResponse = {
+    accessToken: string
+    expiresAt: string
+    refreshToken: string
+    tokenType: string
+}

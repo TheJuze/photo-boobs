@@ -41,6 +41,7 @@ module.exports = {
     "react/jsx-no-useless-fragment": "off",
     'react/jsx-props-no-spreading': 'off',
     'no-unused-vars': 'warn',
+    "jsx-a11y/control-has-associated-label": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

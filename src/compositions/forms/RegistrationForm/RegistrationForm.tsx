@@ -5,7 +5,9 @@ import {
   ArrowRightIcon, LockIcon, MessageIcon, ProfileIcon,
 } from "assets/images/icons";
 
+import { useNavigate } from "react-router";
 import useRegistration from "./utils/useRegistration";
+import { constants } from "../../../helpers";
 
 export type RegistrationInputs = {
     username: string;
@@ -19,12 +21,26 @@ const RegistrationForm = () => {
   } = useForm<RegistrationInputs>({
     mode: "onBlur",
   });
+
+  const navigate = useNavigate();
+
   const registerUser = useRegistration();
+
+  const redirectToHome = () => {
+    navigate(constants.routes.auth);
+  };
 
   return (
     <>
-      <form className="flex flex-col h-full py-44" onSubmit={handleSubmit(registerUser)}>
-        <h1 className="text-center text-h1 mb-[108rem] text-white">Присоединяйся</h1>
+      <form className="flex flex-col h-full py-28" onSubmit={handleSubmit(registerUser)}>
+        <div
+          role="button"
+          tabIndex={0}
+          className="rounded-full w-32 h-32 bg-accent cursor-pointer"
+          onClick={redirectToHome}
+          onKeyDown={redirectToHome}
+        />
+        <h1 className="text-center text-h1 mb-[108rem] text-black">Присоединяйся</h1>
         <Input
           type="text"
           placeholder="Username"
