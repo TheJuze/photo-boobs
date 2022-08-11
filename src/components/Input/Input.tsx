@@ -15,7 +15,7 @@ type Props = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputE
 
 const Input: FC<Props> = (props) => {
   const {
-    className, register, iconLeft, iconRight, ...otherProps
+    className, register, onBlur, iconLeft, iconRight, ...otherProps
   } = props;
 
   const containerClassName = cx(
@@ -35,6 +35,7 @@ const Input: FC<Props> = (props) => {
         className={inputClassName}
         {...otherProps}
         {...register}
+        onBlur={onBlur}
       />
       {iconRight || null}
     </label>

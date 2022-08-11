@@ -24,14 +24,16 @@ const Friend: React.FC<Props> = ({
   };
 
   return (
-    <div className="flex items-center justify-between">
-      <img
-        src={getImageUrl(imagePath)}
-        alt=" "
-        className="w-32 h-32 rounded-full"
-      />
-      <span className="capitalize text-label text-black">{name || username}</span>
-      <div className="flex">
+    <div className="flex items-center">
+      <div className="bg-brand-gradient p-2 rounded-full">
+        <img
+          src={getImageUrl(imagePath)}
+          alt=" "
+          className="w-36 h-36 rounded-full"
+        />
+      </div>
+      <span className="ml-14 font-semibold text-body-medium text-gray-1">{name || username}</span>
+      <div className="flex ml-auto">
         {onAdd && (<Button className="py-6" onClick={handleAdd}>Add</Button>)}
         {onDelete && (<Button className="ml-8" onClick={handleDelete}>X</Button>)}
       </div>

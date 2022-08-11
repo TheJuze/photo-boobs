@@ -12,3 +12,4 @@ export { ReactComponent as DownloadIcon } from "./download.svg";
 export { ReactComponent as DownloadGradientIcon } from "./download-gradient.svg";
 export { ReactComponent as HideIcon } from "./hide.svg";
 export { ReactComponent as LogoIcon } from "./logo.svg";
+export { ReactComponent as SearchIcon } from "./search.svg";
