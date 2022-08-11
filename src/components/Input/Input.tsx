@@ -7,6 +7,7 @@ type BaseInputProps = {
   register: any
   error: any
   iconLeft?: React.ReactElement
+  iconRight?: React.ReactElement
 }
 
 type Props = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -14,21 +15,28 @@ type Props = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputE
 
 const Input: FC<Props> = (props) => {
   const {
-    className, register, error, iconLeft, ...otherProps
+    className, register, iconLeft, iconRight, ...otherProps
   } = props;
 
+  const containerClassName = cx(
+    className,
+    "rounded-full w-full flex",
+    "items-center bg-border-color py-16 px-24 cursor-text",
+  );
+  const inputClassName = cx(
+    "w-full bg-transparent placeholder:text-light-gray",
+    "text-body-small outline-none autofill:shadow-inherit",
+    { "ml-10": iconLeft },
+  );
   return (
-    <label className={cx(className, "relative rounded-[20rem] w-full flex items-center bg-gray  py-16 px-24 cursor-text")}>
+    <label className={containerClassName}>
       {iconLeft || null}
       <input
-        className={cx(
-          "w-full bg-transparent placeholder:text-light-gray text-caption outline-none text-white",
-          { "ml-8": iconLeft },
-        )}
+        className={inputClassName}
         {...otherProps}
         {...register}
       />
-      <p className="absolute inset-0">{error}</p>
+      {iconRight || null}
     </label>
   );
 };

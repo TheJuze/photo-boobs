@@ -1,8 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-
-import { Button, Input } from "components";
-import { useNavigate } from "react-router";
+import { Button, Input, RedirectButton } from "components";
 import { constants } from "helpers";
 import { LockIcon, ProfileIcon } from "assets/images/icons";
 import useLogin from "./utils/useLogin";
@@ -15,21 +13,10 @@ export type LoginInputs = {
 const LoginForm = () => {
   const { register, handleSubmit, formState: { errors, isValid } } = useForm<LoginInputs>();
   const loginUser = useLogin();
-  const navigate = useNavigate();
-
-  const redirectToHome = () => {
-    navigate(constants.routes.auth);
-  };
 
   return (
     <form className="flex flex-col h-full py-28" onSubmit={handleSubmit(loginUser)}>
-      <div
-        role="button"
-        tabIndex={0}
-        className="rounded-full w-32 h-32 bg-accent cursor-pointer"
-        onClick={redirectToHome}
-        onKeyDown={redirectToHome}
-      />
+      <RedirectButton route={constants.routes.home} />
       <h1 className="text-center text-h1 mb-[108rem] text-black">Login</h1>
       <Input
         type="text"

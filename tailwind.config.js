@@ -38,6 +38,7 @@ module.exports = {
         'gray-2': '#ADA4A5',
         'gray-3': '#DDDADA',
         'border-color': '#F7F8F8',
+        'white-30': 'rgba(255, 255, 255, 0.3)'
       },
       fontSize: {
         // some styles are in globals.scss
@@ -48,7 +49,8 @@ module.exports = {
         50: '50rem',
       },
       backgroundImage: {
-        "brand-gradient": 'linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)'
+        "brand-gradient": 'linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)',
+        'header-1': "url('../assets/images/backgrounds/header-bg-1.jpg')",
       },
       boxShadow: {
         "blue": "0 10rem 22rem  rgba(149, 173, 254, 0.3)"

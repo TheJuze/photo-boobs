@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Input, Button } from "components";
+import { Input, Button, RedirectButton } from "components";
 import {
-  ArrowRightIcon, LockIcon, MessageIcon, ProfileIcon,
+  ArrowRightIcon, LockIcon, MessageIcon, ProfileIcon, HideIcon, ShowIcon,
 } from "assets/images/icons";
-import { useNavigate } from "react-router";
 import { constants } from "helpers";
+import cx from "classnames";
 import useRegistration from "./utils/useRegistration";
 
 export type RegistrationInputs = {
@@ -15,42 +15,39 @@ export type RegistrationInputs = {
 }
 
 const RegistrationForm = () => {
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
   const {
     register, handleSubmit, formState: { errors, isValid },
   } = useForm<RegistrationInputs>({
     mode: "onBlur",
   });
 
-  const navigate = useNavigate();
-
   const registerUser = useRegistration();
 
-  const redirectToHome = () => {
-    navigate(constants.routes.auth);
+  const iconClassName = "w-18 h-18 text-gray-1 shrink-0";
+
+  const handleVisibilityChange = () => {
+    setIsPasswordVisible((prevState) => !prevState);
   };
 
   return (
     <>
       <form className="flex flex-col h-full py-28" onSubmit={handleSubmit(registerUser)}>
-        <div
-          role="button"
-          tabIndex={0}
-          className="rounded-full w-32 h-32 bg-accent cursor-pointer"
-          onClick={redirectToHome}
-          onKeyDown={redirectToHome}
-        />
-        <h1 className="text-center text-h1 mb-[108rem] text-black">Присоединяйся</h1>
+        <RedirectButton route={constants.routes.home} />
+        <h1 className="text-center text-h1 mt-40 text-white font-extrabold">Присоединяйся</h1>
         <Input
+          className="mt-[50%]"
           type="text"
           placeholder="Username"
           register={register("username", { required: true })}
           error={errors.username}
-          iconLeft={<ProfileIcon className="text-white w-18 h-18" />}
+          iconLeft={<ProfileIcon className={iconClassName} />}
         />
         <Input
-          type="password"
+          type={isPasswordVisible ? "text" : "password"}
           placeholder="Password"
-          className="mt-14"
+          className="mt-8"
           register={register("password", {
             required: true,
             minLength: {
@@ -59,17 +56,22 @@ const RegistrationForm = () => {
             },
           })}
           error={errors.password}
-          iconLeft={<LockIcon className="text-white w-18 h-18" />}
+          iconLeft={<LockIcon className={iconClassName} />}
+          iconRight={
+            isPasswordVisible
+              ? <HideIcon className={cx(iconClassName, "cursor-pointer")} onClick={handleVisibilityChange} />
+              : <ShowIcon className={cx(iconClassName, "cursor-pointer")} onClick={handleVisibilityChange} />
+}
         />
         <Input
           type="email"
           placeholder="Email"
-          className="mt-14"
+          className="mt-8"
           register={register("email", {
             required: true,
           })}
           error={errors.email}
-          iconLeft={<MessageIcon className="text-white w-18 h-18" />}
+          iconLeft={<MessageIcon className={iconClassName} />}
         />
         <Button type="submit" disabled={!isValid} className="mt-auto">
           Продолжить

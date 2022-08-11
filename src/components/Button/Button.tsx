@@ -24,7 +24,7 @@ const Button: FC<Props> = (props) => {
     "text-body-large text-white w-full py-16",
     "bg-brand-gradient rounded-32 font-bold",
     "shadow-blue",
-    { "bg-gray text-light-gray cursor-not-allowed": disabled },
+    { "bg-gray-2 bg-none cursor-not-allowed": disabled },
   );
 
   if (isLink) {
