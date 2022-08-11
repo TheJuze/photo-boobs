@@ -61,7 +61,7 @@ const RegistrationForm = () => {
             isPasswordVisible
               ? <HideIcon className={cx(iconClassName, "cursor-pointer")} onClick={handleVisibilityChange} />
               : <ShowIcon className={cx(iconClassName, "cursor-pointer")} onClick={handleVisibilityChange} />
-}
+          }
         />
         <Input
           type="email"
