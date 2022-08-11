@@ -32,24 +32,23 @@ module.exports = {
       spacing,
       ...sizes,
       colors: {
+        'black': '#1D1617',
         'white': '#FFFFFF',
-        'gray': '#394147',
-        'light-gray': '#8C9093',
-        'black': '#2A2A2A',
-        'accent': '#00C8B0',
+        'gray-1': '#7B6F72',
+        'gray-2': '#ADA4A5',
+        'gray-3': '#DDDADA',
+        'border-color': '#F7F8F8',
       },
       fontSize: {
         // some styles are in globals.scss
-        'subheading': ['24rem', '34rem'],
-        'button': ['16rem', '24rem'],
-        'button-semibold': ['16rem', '20rem'],
-        'caption': ['12rem', '18rem'],
-        'label': ['16rem', '19rem'],
-        'description': ['14rem', '20rem'],
+        'caption': ['10rem', '15rem'],
       },
       borderRadius: {
         32: '32rem',
         50: '50rem',
+      },
+      backgroundImage: {
+        "brand-gradient": 'linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)'
       }
     },
   },
