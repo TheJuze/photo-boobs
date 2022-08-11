@@ -10,12 +10,17 @@ const useCamera = (webcamRef:React.MutableRefObject<Webcam | null>) => {
     setImgSrc(imageSrc);
   };
 
-  const sendImage = (userIds: string[]) => {
+  const sendImage = async (userIds: string[]) => {
     const base64 = imgSrc?.replace("data:image/jpeg;base64,", "");
-    restApi.post(constants.endpoints.image.sendPhoto, {
-      file: base64,
-      userIds,
-    });
+
+    try {
+      await restApi.post(constants.endpoints.image.sendPhoto, {
+        file: base64,
+        userIds,
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const clearImage = () => {

@@ -41,7 +41,7 @@ module.exports = {
     "react/jsx-no-useless-fragment": "off",
     'react/jsx-props-no-spreading': 'off',
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-unused-vars": ["warn"],
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/control-has-associated-label": "off",
     "import/extensions": [

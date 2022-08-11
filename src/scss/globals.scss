@@ -46,23 +46,16 @@ body {
     margin-left: auto;
   }
 
-  .bone {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    @apply bg-gray-light;
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
 
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(#fff, 0.07), transparent);
-      transform: translateX(-100%);
-      animation: translateX100 2s infinite;
-      content: '';
+  @keyframes skeleton-loading {
+    0% {
+      @apply bg-gray-2;
+    }
+    100% {
+      @apply bg-gray-3;
     }
   }
 
@@ -136,3 +129,4 @@ body {
 .text-body-small {}
 .text-gradient-1 {}
 .width-container {}
+.bone {}

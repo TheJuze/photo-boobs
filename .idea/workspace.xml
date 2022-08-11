@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="login page styles">
+    <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="add container">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/close-square-gradient.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/download-gradient.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/icons/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/RegistrationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/restApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/restApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/icons/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/utils/useEditProfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/utils/useEditProfile.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Capture/Capture.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Capture/Capture.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/CaptureButton/CaptureButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/CaptureButton/CaptureButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/components/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/components/User.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/utils/useMyFriends.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/utils/useMyFriends.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/utils/useCamera.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/utils/useCamera.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/globals.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
@@ -53,11 +61,11 @@
       <recent name="C:\Users\Dmitriy\Documents\photo-boobs\src\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/HomePage/components/Send" />
       <recent name="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users" />
       <recent name="$PROJECT_DIR$/src/assets/images" />
       <recent name="$PROJECT_DIR$/src/scss" />
       <recent name="$PROJECT_DIR$/src/compositions/forms" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,7 +98,7 @@
       <workItem from="1659780487874" duration="1520000" />
       <workItem from="1659963534884" duration="4338000" />
       <workItem from="1659968040556" duration="48415000" />
-      <workItem from="1660215574315" duration="6442000" />
+      <workItem from="1660215574315" duration="14696000" />
     </task>
     <task id="LOCAL-00001" summary="registration form">
       <created>1659826216600</created>
@@ -253,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660222764701</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="add container">
+      <created>1660224421662</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1660224421662</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +308,8 @@
     <MESSAGE value="button and uth page styles" />
     <MESSAGE value="register styles" />
     <MESSAGE value="login page styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="login page styles" />
+    <MESSAGE value="add container" />
+    <option name="LAST_COMMIT_MESSAGE" value="add container" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

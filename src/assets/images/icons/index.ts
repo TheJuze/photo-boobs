@@ -7,5 +7,8 @@ export { ReactComponent as UserIcon } from "./user.svg";
 export { ReactComponent as ShowIcon } from "./show.svg";
 export { ReactComponent as SendIcon } from "./send.svg";
 export { ReactComponent as CloseSquareIcon } from "./close-square.svg";
+export { ReactComponent as CloseSquareGradientIcon } from "./close-square-gradient.svg";
 export { ReactComponent as DownloadIcon } from "./download.svg";
+export { ReactComponent as DownloadGradientIcon } from "./download-gradient.svg";
 export { ReactComponent as HideIcon } from "./hide.svg";
+export { ReactComponent as LogoIcon } from "./logo.svg";

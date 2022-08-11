@@ -8,7 +8,10 @@ const CaptureButton: React.FC<Props> = (props) => {
   return (
     <button
       type="button"
-      className={cx(className, "rounded-full bg-accent w-80 h-80 relative flex justify-center items-center")}
+      className={cx(
+        className,
+        "rounded-full drop-shadow-blue bg-brand-gradient w-80 h-80 relative flex justify-center items-center",
+      )}
       {...otherProps}
     >
       {children}

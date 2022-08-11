@@ -1,26 +1,33 @@
 import React from "react";
 import cx from "classnames";
-import useMyFriends from "./utils/useMyFriends";
+import { UserInfo } from "types";
 import User from "./components/User";
 
 type Props = {
-  className?: string
+    friends: UserInfo[]
+    onSelect: (value: boolean, id?: string) => void
+    selectedUsers: string[]
+    isAllSelected: boolean
+    className?: string
 }
 
-const Users:React.FC<Props> = ({ className }) => {
-  const { friends } = useMyFriends();
-  return (
-    <ul className={cx(className, "flex gap-24")}>
-      <li>
-        <User name="All" />
-      </li>
-      {friends.map((user) => (
-        <li key={user.id}>
-          <User {...user} />
+const Users:React.FC<Props> = ({
+  className, friends, onSelect, selectedUsers, isAllSelected,
+}) => (
+  <ul className={cx(className, "flex")}>
+    <li>
+      <User name="All" isChecked={isAllSelected} onCheck={onSelect} />
+    </li>
+    {friends.map((user) => {
+      const isSelected = Boolean(selectedUsers.find((selectedUser) => selectedUser === user.id));
+
+      return (
+        <li key={user.id} className="ml-24">
+          <User {...user} isChecked={!isAllSelected && isSelected} onCheck={onSelect} />
         </li>
-      ))}
-    </ul>
-  );
-};
+      );
+    })}
+  </ul>
+);
 
 export default Users;
