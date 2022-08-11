@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+import React, { ButtonHTMLAttributes, DetailedHTMLProps, memo } from "react";
 import cx from "classnames";
 
 type Props = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
@@ -19,4 +19,4 @@ const CaptureButton: React.FC<Props> = (props) => {
   );
 };
 
-export default CaptureButton;
+export default memo(CaptureButton);

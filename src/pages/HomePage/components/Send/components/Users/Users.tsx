@@ -11,7 +11,7 @@ type Props = {
     className?: string
 }
 
-const Users:React.FC<Props> = ({
+const Users: React.FC<Props> = ({
   className, friends, onSelect, selectedUsers, isAllSelected,
 }) => (
   <ul className={cx(className, "flex")}>

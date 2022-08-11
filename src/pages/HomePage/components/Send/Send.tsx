@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   CloseSquareGradientIcon, DownloadGradientIcon, SendIcon,
 } from "assets/images/icons";
@@ -17,29 +17,29 @@ const Send: React.FC<Props> = ({
   imgSrc, onSend, onClear, onSave,
 }) => {
   const { friends } = useMyFriends();
-  const friendIds = friends.map((friend) => friend.id);
+  const friendIds = useMemo(() => friends.map((friend) => friend.id), [friends]);
 
-  const [selectedUsers, setSelectedUsers] = useState<string[]>(friendIds);
+  const [selectedUsers, setSelectedUsers] = useState<string[]>([]);
 
-  const handleSelect = (isSelected: boolean, id?:string) => {
+  const handleSelect = useCallback((isSelected: boolean, id?:string) => {
     if (isSelected && !id) {
       setSelectedUsers(friendIds);
     }
 
     if (id) {
       if (isSelected) {
-        setSelectedUsers((prevState) => [...prevState, id]);
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        setSelectedUsers((prevState) => [...new Set([...prevState, id])]);
       } else {
         setSelectedUsers((prevState) => prevState.filter((user) => user !== id));
       }
     }
-  };
+  }, []);
 
   const isAllSelected = useMemo(
-    () => (selectedUsers.length === friendIds.length
-            && friends.every((user) => selectedUsers.includes(user.id)))
-            || selectedUsers.length === 0,
-    [selectedUsers, friends],
+    () => selectedUsers.length === friendIds.length || selectedUsers.length === 0,
+    [selectedUsers, friendIds],
   );
 
   const handleSend = () => {
@@ -63,7 +63,7 @@ const Send: React.FC<Props> = ({
         <CaptureButton onClick={handleSend}>
           <SendIcon className="absolute z-10 inset-1/2 -translate-x-1/2 -translate-y-1/2 text-white" />
         </CaptureButton>
-        <DownloadGradientIcon onClick={onSave} className="text-gradient-1" />
+        <DownloadGradientIcon onClick={onSave} className="cursor-pointer" />
       </div>
       <Users
         className="mt-auto w-full"

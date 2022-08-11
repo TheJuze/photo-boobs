@@ -20,8 +20,8 @@ const Capture:React.FC<Props> = (({ onCapture, webcamRef, className }) => {
   return (
     <div className={cx(className, "w-full h-full flex flex-col justify-between")}>
       <div className="flex justify-between w-full">
-        <UserIcon onClick={() => navigate(constants.routes.friends)} />
-        <ProfileIcon onClick={() => navigate(constants.routes.profile)} />
+        <UserIcon onClick={() => navigate(constants.routes.friends)} className="cursor-pointer" />
+        <ProfileIcon onClick={() => navigate(constants.routes.profile)} className="cursor-pointer" />
       </div>
       <div className="flex flex-col items-center w-full mt-auto">
         <div className="w-full h-auto aspect-square rounded-50 skeleton overflow-hidden">
