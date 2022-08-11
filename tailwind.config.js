@@ -23,9 +23,7 @@ const sizes = sizeMap.reduce((acc, size) => {
 
 module.exports = {
   content: [
-    "./src/pages/**/*.{ts,tsx}",
-    "./src/components/**/*.{ts,tsx}",
-    "./src/compositions/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
@@ -54,7 +52,10 @@ module.exports = {
         'header-2': "url('../assets/images/backgrounds/header-bg-2.jpg')",
       },
       boxShadow: {
-        "blue": "0 10rem 22rem  rgba(149, 173, 254, 0.3)"
+        "blue": "0 10rem 22rem  rgba(149, 173, 254, 0.3)",
+      },
+      dropShadow: {
+        "blue": "0px 4px 6px #D2E0FF"
       }
     },
   },

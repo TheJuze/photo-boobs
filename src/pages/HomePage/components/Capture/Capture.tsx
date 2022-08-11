@@ -33,9 +33,11 @@ const Capture:React.FC<Props> = (({ onCapture, webcamRef, className }) => {
         </div>
         <CaptureButton
           onClick={onCapture}
-          className="mt-32"
+          className="mt-32 drop-shadow-blue"
         >
-          <span className="w-62 h-62 border-2 absolute z-10 inset-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-white" />
+          <span
+            className="w-62 h-62 border-2 absolute z-10 inset-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-white"
+          />
         </CaptureButton>
       </div>
       <div className="flex flex-col items-center mt-auto">

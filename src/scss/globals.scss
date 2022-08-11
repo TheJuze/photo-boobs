@@ -41,20 +41,9 @@ body {
 @layer components {
   .width-container {
     width: 100%;
+    max-width: 375rem;
     margin-right: auto;
     margin-left: auto;
-    @screen sm {
-      padding-right: 16rem;
-      padding-left: 16rem;
-    }
-    @screen md {
-      padding-right: 16rem;
-      padding-left: 16rem;
-    }
-    @screen lg {
-      box-sizing: content-box;
-      max-width: 1152px;
-    }
   }
 
   .bone {

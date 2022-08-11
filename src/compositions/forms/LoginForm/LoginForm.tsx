@@ -16,7 +16,9 @@ export type LoginInputs = {
 const LoginForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
-  const { register, handleSubmit, formState: { errors, isValid } } = useForm<LoginInputs>();
+  const { register, handleSubmit, formState: { errors, isValid } } = useForm<LoginInputs>({
+    mode: "onChange",
+  });
   const loginUser = useLogin();
 
   const iconClassName = "w-18 h-18 text-gray-1 shrink-0";
@@ -35,7 +37,7 @@ const LoginForm = () => {
         placeholder="Username"
         register={register("username", { required: true })}
         error={errors.username}
-        iconLeft={<ProfileIcon className="text-white w-18 h-18" />}
+        iconLeft={<ProfileIcon className={iconClassName} />}
       />
       <Input
         type={isPasswordVisible ? "text" : "password"}
@@ -43,7 +45,7 @@ const LoginForm = () => {
         className="mt-14"
         register={register("password", { required: true })}
         error={errors.password}
-        iconLeft={<LockIcon className="text-white w-18 h-18" />}
+        iconLeft={<LockIcon className={iconClassName} />}
         iconRight={
             isPasswordVisible
               ? <HideIcon className={cx(iconClassName, "cursor-pointer")} onClick={handleVisibilityChange} />

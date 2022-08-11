@@ -20,7 +20,7 @@ const RegistrationForm = () => {
   const {
     register, handleSubmit, formState: { errors, isValid },
   } = useForm<RegistrationInputs>({
-    mode: "onBlur",
+    mode: "onChange",
   });
 
   const registerUser = useRegistration();

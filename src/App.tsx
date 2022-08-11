@@ -17,7 +17,7 @@ const App = () => {
   }
 
   return (
-    <div className="bg-black h-full">
+    <div className="h-full width-container">
       <ProfileProvider>
         <BrowserRouter>
           <Routes>
