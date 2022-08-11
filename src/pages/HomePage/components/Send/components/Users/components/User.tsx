@@ -3,7 +3,7 @@ import { UserInfo } from "types";
 import { getImageUrl } from "helpers";
 
 const User:React.FC<Partial<UserInfo>> = ({ imagePath, name, username }) => (
-  <label className="flex flex-col items-center">
+  <label className="flex flex-col items-center cursor-pointer">
     <input type="hidden" checked={false} />
     {imagePath ? (
       <div className="rounded-full w-24 h-24 border-transparent border-2 overflow-hidden">

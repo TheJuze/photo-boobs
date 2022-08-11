@@ -6,7 +6,7 @@ const useAuthedNavigation = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem(constants.localStorage.authToken);
+    const token = localStorage.getItem(constants.localStorage.accessToken);
     if (!token) {
       navigate(constants.routes.auth);
     }

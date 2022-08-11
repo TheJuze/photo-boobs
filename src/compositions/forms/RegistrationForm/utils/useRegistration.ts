@@ -10,14 +10,17 @@ const useRegistration = () => {
 
   const registerUser: SubmitHandler<RegistrationInputs> = async ({ username, password, email }) => {
     try {
-      // eslint-disable-next-line max-len
-      const { data: { accessToken } } = await restApi.post<AuthResponse>(constants.endpoints.auth.registration, {
+      const {
+        data: { accessToken, refreshToken, tokenType },
+      } = await restApi.post<AuthResponse>(constants.endpoints.auth.registration, {
         username,
         password: sha256(password),
         email,
       });
 
-      localStorage.setItem(constants.localStorage.authToken, accessToken);
+      localStorage.setItem(constants.localStorage.accessToken, accessToken);
+      localStorage.setItem(constants.localStorage.refreshToken, refreshToken);
+      localStorage.setItem(constants.localStorage.tokenType, tokenType);
 
       navigate(constants.routes.home);
     } catch (err) {

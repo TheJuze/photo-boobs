@@ -1,4 +1,6 @@
-import React, { DetailedHTMLProps, FC, InputHTMLAttributes } from "react";
+import React, {
+  DetailedHTMLProps, FC, InputHTMLAttributes, memo,
+} from "react";
 import cx from "classnames";
 
 type BaseInputProps = {
@@ -31,4 +33,4 @@ const Input: FC<Props> = (props) => {
   );
 };
 
-export default Input;
+export default memo(Input);

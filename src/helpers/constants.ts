@@ -37,7 +37,9 @@ const endpoints = {
 };
 
 const localStorage = {
-  authToken: "auth-token",
+  accessToken: "access-token",
+  refreshToken: "refresh-token",
+  tokenType: "token-type",
 };
 
 export default {

@@ -10,7 +10,7 @@ const useLogin = () => {
 
   const loginUser: SubmitHandler<LoginInputs> = async ({ username, password }) => {
     try {
-      const { data: { accessToken } } = await restApi.post<AuthResponse>(
+      const { data: { accessToken, refreshToken, tokenType } } = await restApi.post<AuthResponse>(
         constants.endpoints.auth.login,
         {
           username,
@@ -18,7 +18,9 @@ const useLogin = () => {
         },
       );
 
-      localStorage.setItem(constants.localStorage.authToken, accessToken);
+      localStorage.setItem(constants.localStorage.accessToken, accessToken);
+      localStorage.setItem(constants.localStorage.refreshToken, refreshToken);
+      localStorage.setItem(constants.localStorage.tokenType, tokenType);
 
       navigate(constants.routes.home);
     } catch (err) {
