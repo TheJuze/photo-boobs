@@ -21,8 +21,9 @@ const Button: FC<Props> = (props) => {
   const buttonClassName = cx(
     className,
     "flex justify-center items-center",
-    "text-button text-white w-full py-16",
-    "bg-accent rounded-32 font-bold",
+    "text-body-large text-white w-full py-16",
+    "bg-brand-gradient rounded-32 font-bold",
+    "shadow-blue",
     { "bg-gray text-light-gray cursor-not-allowed": disabled },
   );
 

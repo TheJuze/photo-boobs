@@ -1,5 +1,5 @@
 // Custom spacing
-const spacingMap = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 72, 80, 96, 112 ]
+const spacingMap = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 36, 40, 42, 44, 48, 52, 56, 60, 64, 68, 72, 80, 96, 112 ]
 
 const spacing = spacingMap.reduce((acc, item) => {
   acc[item.toString()] = `${item}rem`
@@ -49,6 +49,9 @@ module.exports = {
       },
       backgroundImage: {
         "brand-gradient": 'linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)'
+      },
+      boxShadow: {
+        "blue": "0 10rem 22rem  rgba(149, 173, 254, 0.3)"
       }
     },
   },
