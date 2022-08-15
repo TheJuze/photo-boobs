@@ -51,6 +51,7 @@ const Send: React.FC<Props> = ({
 
     if (typeof onSend === "function") {
       onSend(selectedFriends);
+      onClear();
     }
   };
 

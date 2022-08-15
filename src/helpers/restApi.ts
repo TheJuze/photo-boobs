@@ -14,7 +14,9 @@ restApi.interceptors.request.use((config) => {
     newConfig.headers = {};
   }
 
-  newConfig.headers.Authorization = `${tokenType} ${token}`;
+  if (tokenType && token) {
+    newConfig.headers.Authorization = `${tokenType} ${token}`;
+  }
 
   return newConfig;
 });
