@@ -4,10 +4,48 @@
     <list default="true" id="23febc75-4962-474a-a5b4-5e0054cb7c53" name="Changes" comment="fix bugs">
       <change afterPath="$PROJECT_DIR$/src/assets/images/icons/search.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/icons/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RedirectButton/RedirectButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RedirectButton/RedirectButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/EditProfileForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/EditProfileForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/utils/useEditProfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/EditProfileForm/utils/useEditProfile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/LoginForm/utils/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/LoginForm/utils/useLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/RegistrationForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/RegistrationForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/utils/useRegistration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/RegistrationForm/utils/useRegistration.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/forms/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/forms/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compositions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/compositions/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/profile/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/getters.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/getters.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/restApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/restApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useAuthedNavigation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuthedNavigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useCheckAuth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCheckAuth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useDebounce.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDebounce.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AuthPage/AuthPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AuthPage/AuthPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/FriendsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/FriendsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/components/Friend/Friend.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/components/Friend/Friend.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/FriendsPage/utils/useFriends.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/FriendsPage/utils/useFriends.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Capture/Capture.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Capture/Capture.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/CaptureButton/CaptureButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/CaptureButton/CaptureButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/Send.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/Users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/Users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/components/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/components/Users/components/User.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/components/Send/utils/useMyFriends.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/components/Send/utils/useMyFriends.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/utils/useCamera.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/utils/useCamera.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/LoginPage/LoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/LoginPage/LoginPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProfilePage/ProfilePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProfilePage/ProfilePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/RegistrationPage/RegistrationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrationPage/RegistrationPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +72,11 @@
     "last_opened_file_path": "/Users/dmitriypavlov/WebstormProjects/photo-boobs/src/assets/images/backgrounds",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "/Users/dmitriypavlov/WebstormProjects/photo-boobs/node_modules/eslint",
+    "node.js.selected.package.eslint": "C:\\Users\\Dmitriy\\Documents\\photo-boobs\\node_modules\\eslint",
     "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "/Users/dmitriypavlov/WebstormProjects/photo-boobs/node_modules/typescript/lib",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "ts.external.directory.path": "C:\\Users\\Dmitriy\\Documents\\photo-boobs\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

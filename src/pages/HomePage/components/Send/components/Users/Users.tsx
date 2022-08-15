@@ -10,7 +10,7 @@ type Props = {
     isAllSelected: boolean
     className?: string
 }
-
+// TODO: refactor me
 const Users: React.FC<Props> = ({
   className, friends, onSelect, selectedUsers, isAllSelected,
 }) => (
